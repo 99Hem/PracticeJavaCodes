@@ -1,0 +1,8 @@
+<component name="libraryTable">
+  <library name="com.weicoder.fork:mysql-connector-java-jdk11:8.0.19" type="repository">
+    <properties maven-id="com.weicoder.fork:mysql-connector-java-jdk11:8.0.19" />
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
