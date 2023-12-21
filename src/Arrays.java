@@ -1,11 +1,17 @@
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
-public class Arrays {
+class ArraysScenario {
 
     public static void removeduplicates() {
 
-        int a[] = {1, 1, 3, 3, 3, 4, 4};
+        int a[] = {1,2,4,3,4,3,4};
+        Arrays.sort(a);
         int n = a.length;
+        int j = 0;
         if (n == 0 || n == 1) {
 
         }
@@ -13,13 +19,12 @@ public class Arrays {
         // creating another array for only storing
         // the unique elements
         int[] temp = new int[n];
-        int j = 0;
 
         for (int i = 0; i < n - 1; i++) {
             if (a[i] != a[i + 1]) {
                 temp[j++] = a[i];
             }
-        }
+            }
 
         temp[j++] = a[n - 1];
 
@@ -29,6 +34,24 @@ public class Arrays {
         }
         for (int m = 0; m < j; m++) {
             System.out.print(a[m] + " ");
+        }
+//        int[] res = Arrays.stream(a).distinct().toArray();
+//        IntStream array = Arrays.stream(res);
+//        array.forEach(System.out::println);
+    }
+
+    public static void rightShiftArray(){
+        int[] arr = new int[]{0,1,2,3,4,5,6,7,8,9};
+        int n = 3;   //no of times right shift
+        for(int i = 0;i <n;i++){
+            int last = arr[arr.length - 1];
+            for(int j = arr.length -1;j>0;j--){
+                arr[j] = arr[j-1];
+            }
+            arr[0] = last;
+        }
+        for(int i = 0; i < arr.length;i++){
+            System.out.print(arr[i] + " ");
         }
     }
 
@@ -78,21 +101,19 @@ public class Arrays {
     }
 
     public static void primenumber(int num){
-        boolean flag = false;
-        for(int i = 2; i <= num; i++){
-            int m = i/2;
-            for(int div = 2; div <= m; div++){
-                if(i%div == 0){
+        for (int i = 2; i <= num; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
                     break;
-                }else {flag = true;}
-                //System.out.println(div);
-            }if(flag == true){
-                System.out.println(i);
+                }
+            }
+            if (isPrime) {
+                System.out.print(i + " ");
             }
 
-            flag = false;
-        }
-
+    }
     }
 
     public static void  FibonacciSeries(int num){
@@ -110,9 +131,12 @@ public class Arrays {
 
     public static void Palindrome(String str){
         String reverse = "";
-        char[] ch = str.toCharArray();
-        for(int i = ch.length-1;i >=0;i--){
-            reverse = reverse + ch[i];
+//        char[] ch = str.toCharArray();
+//        for(int i = ch.length-1;i >=0;i--){
+//            reverse +=  ch[i];
+//        }
+        for(int i = str.length()-1;i>=0;i--){
+            reverse += str.charAt(i);
         }
         System.out.println(reverse);
         if(str.equals(reverse)){
@@ -155,6 +179,7 @@ public class Arrays {
     }
 
     public static void fizzBuzz() {
+
         for (int i = 1; i <= 100; i++) {
             String output = "";
             if (i % 3 == 0){
@@ -185,7 +210,33 @@ public class Arrays {
             System.out.print(arr[i] +" ");
     }
 
+    public static void maxMultiDiemensionalArr(){
+        int a[][] = {{1,6,5},{2,7,8},{123,456,798},{234,1000,999}};
+        int max = a[0][0];
 
+        for(int i = 0;i<a.length;i++){
+            for(int j = 0;j<3;j++){
+                if(a[i][j] > max){
+                    max = a[i][j];
+                }
+            }
+        }
+        System.out.println(max);
+    }
+
+    public static void useOfStreams(){
+        List<String> lst = Arrays.asList("12", "02", "145","100");
+        List results = lst.stream().filter(s -> s.startsWith("1")).collect(Collectors.toList());
+        System.out.println(results);
+        List<Integer> lst2 = Arrays.asList(343,65,12,0,1);
+        List sorted = lst2.stream().sorted().collect(Collectors.toList());
+        System.out.println(sorted);
+        List square = lst2.stream().map(x -> x*x).collect(Collectors.toList());
+        System.out.println(square);
+        int[] arr = { 1, 2, 3, 4, 5 };
+        IntStream array = Arrays.stream(arr);
+        array.forEach(System.out::println);
+    }
 
     public static void main(String[] args) {
 //        ascendingArray();
@@ -197,7 +248,7 @@ public class Arrays {
 //        primenumber(31);
 //        FibonacciSeries(56);
 //        System.out.println();
-//        Palindrome("Hem");
+//        Palindrome("noon");
 //        System.out.println();
 //        substring("Hem Atul Shah");
 //        System.out.println();
@@ -205,11 +256,13 @@ public class Arrays {
 //        System.out.println();
 //        SeparateAlphaAndNum("Hello12jhu^%$dwjm32");
 //        fizzBuzz();
-//        int arr[] = {1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9};
+//        int arr[] = {0,1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9};
 //        pushZerosToEnd(arr);
-        String st = "Hello world, how are you";
-        String newst = st.replace("o", "0");
-        System.out.println(newst);
-
+//        String st = "Hello world, how are you";
+//        String newst = st.replace("o", "0");
+//        System.out.println(newst);
+//        maxMultiDiemensionalArr();
+//        useOfStreams();
+        rightShiftArray();
     }
 }
