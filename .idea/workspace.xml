@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4863b6df-188b-4093-b858-cd0f8ed6f643" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TwoDimensionalArrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_weicoder_fork_mysql_connector_java_jdk11_8_0_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MS_Practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MS_Practice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MS_Practice/Arrays.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MS_Practice/DBCon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MS_Practice/XSLT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DBCon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/XSLT.java" beforeDir="false" />
-    </list>
+    <list default="true" id="4863b6df-188b-4093-b858-cd0f8ed6f643" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +101,19 @@
       <option name="presentableId" value="Default" />
       <updated>1677135576920</updated>
     </task>
+    <task id="LOCAL-00001" summary="Latest practice codes">
+      <created>1703145419528</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703145419528</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Latest practice codes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Latest practice codes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
